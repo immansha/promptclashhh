@@ -1,0 +1,14 @@
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3

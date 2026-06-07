@@ -1,0 +1,42 @@
+'Log files:
+C:\Users\imman\OneDrive\Desktop\promptclash\frontend\.npm-cache\_logs\2026-06-07T14_35_41_230Z-debug-0.log
+
+# npm resolution error report
+
+While resolving: next@15.0.0
+Found: react@19.0.0
+node_modules/react
+  peer react@"^19.0.0" from react-dom@19.0.0
+  node_modules/react-dom
+    react-dom@"19.0.0" from the root project
+    peerOptional react-dom@"^18.0.0 || ^19.0.0" from framer-motion@12.40.0
+    node_modules/framer-motion
+      framer-motion@"^12.0.0" from the root project
+  peer react@">= 16.8.0 || 17.x.x || ^18.0.0-0 || ^19.0.0-0" from styled-jsx@5.1.6
+  node_modules/styled-jsx
+    styled-jsx@"5.1.6" from next@15.0.0
+    node_modules/next
+      next@"15.0.0" from the root project
+  peerOptional react@">=18.0.0" from zustand@5.0.14
+  node_modules/zustand
+    zustand@"^5.0.0" from the root project
+  react@"19.0.0" from the root project
+  peerOptional react@"^18.0.0 || ^19.0.0" from framer-motion@12.40.0
+  node_modules/framer-motion
+    framer-motion@"^12.0.0" from the root project
+  peer react@"^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc" from lucide-react@0.468.0
+  node_modules/lucide-react
+    lucide-react@"^0.468.0" from the root project
+
+Could not resolve dependency:
+peer react@"^18.2.0 || 19.0.0-rc-65a56d0e-20241020" from next@15.0.0
+node_modules/next
+  next@"15.0.0" from the root project
+
+Conflicting peer dependency: react@19.0.0-rc-65a56d0e-20241020
+node_modules/react
+  peer react@"^18.2.0 || 19.0.0-rc-65a56d0e-20241020" from next@15.0.0
+  node_modules/next
+    next@"15.0.0" from the root project
+
+Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.

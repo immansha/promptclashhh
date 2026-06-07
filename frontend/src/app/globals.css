@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background: #050816;
+  color: #f8fafc;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(34, 211, 238, 0.16), transparent 28rem),
+    radial-gradient(circle at 80% 15%, rgba(217, 70, 239, 0.13), transparent 30rem),
+    linear-gradient(180deg, #050816 0%, #08111f 46%, #050816 100%);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #ffffff;
+}
+
+.arena-grid {
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.10) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 72%, transparent);
+}
+
+.scanline {
+  background: linear-gradient(180deg, transparent, rgba(34, 211, 238, 0.08), transparent);
+  animation: scanline 8s linear infinite;
+}
+
+.cursor-glow {
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.18), transparent 24rem);
+}
+
+@keyframes scanline {
+  from {
+    transform: translateY(-30%);
+  }
+  to {
+    transform: translateY(130%);
+  }
+}
+
+@keyframes pulse-live {
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(52, 211, 153, 0.45), 0 0 28px rgba(52, 211, 153, 0.18);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(52, 211, 153, 0.75), 0 0 44px rgba(52, 211, 153, 0.32);
+    opacity: 0.88;
+  }
+}
+
+@keyframes pulse-status {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 16px rgba(34, 211, 238, 0.22);
+  }
+  50% {
+    opacity: 0.72;
+    box-shadow: 0 0 28px rgba(34, 211, 238, 0.42);
+  }
+}
+
+@keyframes shake-fail {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+.live-badge {
+  animation: pulse-live 1.8s ease-in-out infinite;
+}
+
+.status-pulse {
+  animation: pulse-status 1.4s ease-in-out infinite;
+}
+
+.status-shake {
+  animation: shake-fail 0.45s ease-in-out;
+}

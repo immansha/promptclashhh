@@ -1,0 +1,128 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\imman\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.14.1
+2 info using node@v22.16.0
+3 silly config load:file:C:\Users\imman\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\imman\OneDrive\Desktop\promptclash\frontend\.npmrc
+5 silly config load:file:C:\Users\imman\.npmrc
+6 silly config load:file:C:\Users\imman\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install framer-motion lucide-react
+8 verbose argv "install" "framer-motion" "lucide-react" "--cache" ".\\.npm-cache"
+9 verbose logfile logs-max:10 dir:C:\Users\imman\OneDrive\Desktop\promptclash\frontend\.npm-cache\_logs\2026-06-07T14_35_41_230Z-
+10 verbose logfile C:\Users\imman\OneDrive\Desktop\promptclash\frontend\.npm-cache\_logs\2026-06-07T14_35_41_230Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+14 silly idealTree buildDeps
+15 silly fetch manifest framer-motion@^12.0.0
+16 silly packumentCache full:https://registry.npmjs.org/framer-motion cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/npm 525ms
+18 http fetch GET 200 https://registry.npmjs.org/framer-motion 491ms (cache miss)
+19 silly packumentCache full:https://registry.npmjs.org/framer-motion set size:undefined disposed:false
+20 silly fetch manifest @emotion/is-prop-valid@*
+21 silly packumentCache full:https://registry.npmjs.org/@emotion%2fis-prop-valid cache-miss
+22 http fetch GET 200 https://registry.npmjs.org/@emotion%2fis-prop-valid 208ms (cache miss)
+23 silly packumentCache full:https://registry.npmjs.org/@emotion%2fis-prop-valid set size:undefined disposed:false
+24 silly fetch manifest react@19.0.0
+25 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+26 http fetch GET 200 https://registry.npmjs.org/react 394ms (cache miss)
+27 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+28 silly fetch manifest react-dom@19.0.0
+29 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+30 http fetch GET 200 https://registry.npmjs.org/react-dom 482ms (cache miss)
+31 silly packumentCache full:https://registry.npmjs.org/react-dom set size:undefined disposed:false
+32 silly fetch manifest lucide-react@^0.468.0
+33 silly packumentCache full:https://registry.npmjs.org/lucide-react cache-miss
+34 http fetch GET 200 https://registry.npmjs.org/lucide-react 270ms (cache miss)
+35 silly packumentCache full:https://registry.npmjs.org/lucide-react set size:undefined disposed:false
+36 silly placeDep ROOT framer-motion@12.40.0 OK for: promptclash-frontend@0.1.0 want: ^12.0.0
+37 silly placeDep ROOT lucide-react@0.468.0 OK for: promptclash-frontend@0.1.0 want: ^0.468.0
+38 silly fetch manifest motion-dom@^12.40.0
+39 silly packumentCache full:https://registry.npmjs.org/motion-dom cache-miss
+40 silly fetch manifest motion-utils@^12.39.0
+41 silly packumentCache full:https://registry.npmjs.org/motion-utils cache-miss
+42 http fetch GET 200 https://registry.npmjs.org/motion-utils 97ms (cache miss)
+43 silly packumentCache full:https://registry.npmjs.org/motion-utils set size:undefined disposed:false
+44 http fetch GET 200 https://registry.npmjs.org/motion-dom 105ms (cache miss)
+45 silly packumentCache full:https://registry.npmjs.org/motion-dom set size:undefined disposed:false
+46 silly placeDep ROOT picomatch@4.0.4 REPLACE for: fdir@6.5.0 want: ^3 || ^4
+47 silly fetch manifest picomatch@^2.0.4
+48 silly packumentCache full:https://registry.npmjs.org/picomatch cache-miss
+49 http fetch GET 200 https://registry.npmjs.org/picomatch 173ms (cache miss)
+50 silly packumentCache full:https://registry.npmjs.org/picomatch set size:undefined disposed:false
+51 silly placeDep node_modules/anymatch picomatch@2.3.2 OK for: anymatch@3.1.3 want: ^2.0.4
+52 silly placeDep ROOT motion-dom@12.40.0 OK for: framer-motion@12.40.0 want: ^12.40.0
+53 silly placeDep ROOT motion-utils@12.39.0 OK for: framer-motion@12.40.0 want: ^12.39.0
+54 silly fetch manifest picomatch@^2.3.1
+55 silly packumentCache full:https://registry.npmjs.org/picomatch cache-miss
+56 http cache https://registry.npmjs.org/picomatch 31ms (cache hit)
+57 silly packumentCache full:https://registry.npmjs.org/picomatch set size:126376 disposed:false
+58 silly placeDep node_modules/micromatch picomatch@2.3.2 OK for: micromatch@4.0.8 want: ^2.3.1
+59 silly fetch manifest react@^18.2.0 || 19.0.0-rc-65a56d0e-20241020
+60 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+61 http cache https://registry.npmjs.org/react 51ms (cache hit)
+62 silly packumentCache full:https://registry.npmjs.org/react set size:6688498 disposed:false
+63 silly fetch manifest react-dom@^18.2.0 || 19.0.0-rc-65a56d0e-20241020
+64 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+65 http cache https://registry.npmjs.org/react-dom 35ms (cache hit)
+66 silly packumentCache full:https://registry.npmjs.org/react-dom set size:8930276 disposed:false
+67 verbose stack Error: could not resolve
+67 verbose stack     at PlaceDep.failPeerConflict (C:\Users\imman\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:503:25)
+67 verbose stack     at new PlaceDep (C:\Users\imman\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\place-dep.js:157:21)
+67 verbose stack     at #buildDepStep (C:\Users\imman\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:947:18)
+67 verbose stack     at async Arborist.buildIdealTree (C:\Users\imman\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\build-ideal-tree.js:169:7)
+67 verbose stack     at async Promise.all (index 1)
+67 verbose stack     at async Arborist.reify (C:\Users\imman\AppData\Roaming\npm\node_modules\npm\node_modules\@npmcli\arborist\lib\arborist\reify.js:111:5)
+67 verbose stack     at async Install.exec (C:\Users\imman\AppData\Roaming\npm\node_modules\npm\lib\commands\install.js:149:5)
+67 verbose stack     at async Npm.exec (C:\Users\imman\AppData\Roaming\npm\node_modules\npm\lib\npm.js:193:9)
+67 verbose stack     at async module.exports (C:\Users\imman\AppData\Roaming\npm\node_modules\npm\lib\cli\entry.js:67:5)
+68 error code ERESOLVE
+69 error ERESOLVE could not resolve
+70 error
+71 error While resolving: next@15.0.0
+71 error Found: react@19.0.0
+71 error node_modules/react
+71 error   peer react@"^19.0.0" from react-dom@19.0.0
+71 error   node_modules/react-dom
+71 error     react-dom@"19.0.0" from the root project
+71 error     peerOptional react-dom@"^18.0.0 || ^19.0.0" from framer-motion@12.40.0
+71 error     node_modules/framer-motion
+71 error       framer-motion@"^12.0.0" from the root project
+71 error   peer react@">= 16.8.0 || 17.x.x || ^18.0.0-0 || ^19.0.0-0" from styled-jsx@5.1.6
+71 error   node_modules/styled-jsx
+71 error     styled-jsx@"5.1.6" from next@15.0.0
+71 error     node_modules/next
+71 error       next@"15.0.0" from the root project
+71 error   4 more (zustand, the root project, framer-motion, lucide-react)
+71 error
+71 error Could not resolve dependency:
+71 error peer react@"^18.2.0 || 19.0.0-rc-65a56d0e-20241020" from next@15.0.0
+71 error node_modules/next
+71 error   next@"15.0.0" from the root project
+71 error
+71 error Conflicting peer dependency: react@19.0.0-rc-65a56d0e-20241020
+71 error node_modules/react
+71 error   peer react@"^18.2.0 || 19.0.0-rc-65a56d0e-20241020" from next@15.0.0
+71 error   node_modules/next
+71 error     next@"15.0.0" from the root project
+71 error
+71 error Fix the upstream dependency conflict, or retry this command with --force or --legacy-peer-deps to accept an incorrect (and potentially broken) dependency resolution.
+72 error
+72 error
+72 error For a full report see:
+72 error C:\Users\imman\OneDrive\Desktop\promptclash\frontend\.npm-cache\_logs\2026-06-07T14_35_41_230Z-eresolve-report.txt
+73 silly unfinished npm timer reify 1780842943579
+74 silly unfinished npm timer reify:loadTrees 1780842943585
+75 silly unfinished npm timer idealTree:buildDeps 1780842943666
+76 silly unfinished npm timer idealTree:node_modules/next 1780842946339
+77 verbose cwd C:\Users\imman\OneDrive\Desktop\promptclash\frontend
+78 verbose os Windows_NT 10.0.26200
+79 verbose node v22.16.0
+80 verbose npm  v11.14.1
+81 notice
+81 notice New minor version of npm available! 11.14.1 -> 11.16.0
+81 notice Changelog: https://github.com/npm/cli/releases/tag/v11.16.0
+81 notice To update run: npm install -g npm@11.16.0
+81 notice  { force: true, [Symbol(proc-log.meta)]: true }
+82 verbose exit 1
+83 verbose code 1
+84 error A complete log of this run can be found in: C:\Users\imman\OneDrive\Desktop\promptclash\frontend\.npm-cache\_logs\2026-06-07T14_35_41_230Z-debug-0.log
