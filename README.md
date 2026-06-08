@@ -1,6 +1,7 @@
 # PromptClash AI
 
 PromptClash AI is a small real-time creative battle loop: a host creates a room, participants join, the host starts a round, participants submit prompts, a background AI job generates outputs, and the host scores or eliminates submissions while the room stays synchronized over WebSockets.
+https://github.com/immansha/promptclashhh/blob/main/tbnail.png
 
 ## What This Project Does
 
