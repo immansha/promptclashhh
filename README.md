@@ -1,7 +1,7 @@
 # PromptClash AI
 
 PromptClash AI is a small real-time creative battle loop: a host creates a room, participants join, the host starts a round, participants submit prompts, a background AI job generates outputs, and the host scores or eliminates submissions while the room stays synchronized over WebSockets.
-![PromptClash AI demo](./https://github.com/immansha/promptclashhh/blob/main/tbnail.png)
+![PromptClash AI demo](.<img src="./tbnail.png" width="100%">)
 
 ## What This Project Does
 
@@ -217,11 +217,6 @@ What survives refresh:
 - Job status survives because `GenerationJob` rows are persisted.
 - Scores and eliminations survive because they are stored on the submission and participant records.
 
-What does not fully survive refresh:
-
-- The client-side activity feed is in memory and is rebuilt from live events; it is not itself persisted as a separate UI store.
-- The backend does keep a `RoomEvent` table, but the current frontend does not replay it on page load.
-
 ## Failure Handling
 
 The implementation has explicit failure paths:
@@ -230,14 +225,12 @@ The implementation has explicit failure paths:
 - Timeout is represented by `job.timed_out`.
 - Invalid prompt state is rejected by the submission service with 4xx responses when the round is not active, the user is the host, the participant is eliminated, or the participant already submitted.
 - The frontend shows socket connection state with an explicit indicator and reconnects automatically after disconnects.
-- The socket client retries after a short delay if the connection drops.
 - The API client surfaces backend errors and network failures as readable messages in the UI.
 
 ## Tradeoffs
 
 - Mock identity instead of JWT: this keeps the assignment focused on room flow, not on auth infrastructure.
 - SQLite: simplest local persistence story for a demo; not the right choice for multi-process production concurrency.
-- In-process asyncio worker: easy to understand and ships with the app, but it is not distributed and it shares process resources with the API server.
 - Mock AI provider: the default provider makes the loop runnable without external credentials.
 - One-round vertical slice: the code proves the room-to-submission-to-scoring loop without trying to cover every battle mode.
 
@@ -279,36 +272,13 @@ See `.env.example` for the current local overrides used by the codebase. The mai
 - `JOB_CONCURRENCY`, `JOB_TIMEOUT_SECS`, `JOB_MAX_RETRIES`, and `JOB_POLL_SECS` for the job worker.
 - `ANTHROPIC_API_KEY`, `AI_MODEL`, and `AI_MAX_TOKENS` if you switch from the mock provider to Anthropic.
 
-## Known Limitations
-
-- Mock identity is not secure authentication.
-- The in-process worker is not distributed.
-- SQLite is appropriate for local and demo use, not for a multi-user production deployment.
-- The code currently covers a single room / single round vertical slice rather than a full tournament system.
-- Manual judging can be biased.
-- The default AI provider is mocked unless you configure a real provider.
-
 ## What I Would Improve With More Time
 
 - JWT or OAuth-based authentication.
 - Redis, Celery, or RQ for background jobs.
 - PostgreSQL for durable multi-user storage.
 - AI-assisted judging with a human override.
-- Reconnect recovery that can reconcile missed deltas automatically.
 - Automated tests for routers, services, worker transitions, and frontend state sync.
 - Deployment support for a real hosting target.
-- A moderation and safety layer for prompts and model outputs.
 
-## Submission Evidence
 
-Screenshots or screen recordings should show the full host + participant flow:
-
-- identity creation
-- room creation and join
-- round start
-- prompt submission
-- async generation progress
-- scoring and elimination
-- refresh/reconnect persistence
-
-That is the smallest evidence set that demonstrates the assignment loop end to end.
